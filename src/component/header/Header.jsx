@@ -5,14 +5,15 @@ import Search from './Search';
 import CustomButtons from './CustomButtons';
 
 const StyledHeader = styled(AppBar)`
-    background: #466a8b;
+    background: #025464;
 `;
-// this is a comment
+
 const Logo = styled('img')`
     display: flex;
     width: 100px;
     border-radius: 5px;
-`;
+`; 
+
 
 const Header = () => {
     return (
