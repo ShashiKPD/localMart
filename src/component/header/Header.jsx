@@ -7,7 +7,7 @@ import CustomButtons from './CustomButtons';
 const StyledHeader = styled(AppBar)`
     background: #466a8b;
 `;
-
+// this is a comment
 const Logo = styled('img')`
     display: flex;
     width: 100px;
