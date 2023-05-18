@@ -4,7 +4,7 @@ export const navData = [
     {text: 'Groceries'},
     {text: 'Mobile'},
     {text: 'Fashion'},
-    {text: 'Electronics'},
+    {text: 'Electronics'},   
     {text: 'Visit More'}
 ]
 
