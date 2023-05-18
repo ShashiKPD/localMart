@@ -45,9 +45,18 @@ const accountIntitialValues = {
       view: 'signup'
   }
 }
+
+const setSignupInitialValues = {
+  username: '',
+  email: '',
+  password: ''
+
+}
+
 const LoginDialog = ({ open, setOpen }) => {
 
   const[account,toggleAccount] = useState(accountIntitialValues.login)
+  const[signup,setSignup] = useState(setSignupInitialValues)
 
   const handleClose = () => {
     setOpen(false);
@@ -56,6 +65,10 @@ const LoginDialog = ({ open, setOpen }) => {
 
   const toggleSignup = () => {
     toggleAccount(accountIntitialValues.signup);
+  }
+
+  const onInputChange = (e) => {
+    console.log(e.target.value);
   }
 
   return (
@@ -73,10 +86,9 @@ const LoginDialog = ({ open, setOpen }) => {
           </Component>
           :
           <Component>
-                <TextInput id="outlined-basic" label="First Name" variant="outlined" />
-                <TextInput id="outlined-basic" label="Last Name" variant="outlined" />
-                <TextInput id="outlined-basic" label="Email" variant="outlined" />
-                <TextInput id="outlined-basic" label="Password" variant="outlined" />
+                <TextInput id="outlined-basic" label="User Name" variant="outlined onChange={(e)=>onInputChange(e)}" />
+                <TextInput id="outlined-basic" label="Email" variant="outlined onChange={(e)=>onInputChange(e)}" />
+                <TextInput id="outlined-basic" label="Password" variant="outlined onChange={(e)=>onInputChange(e)}" />
                 <InputBtn style={{marginTop: 35}}>Submit</InputBtn>
 
                 
