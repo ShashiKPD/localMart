@@ -24,7 +24,7 @@ const NavBar = () => {
     <Component>
       {navData.map((data) => (
         <Container>
-          <Button variant="contained">{data.text}</Button>
+          <Button sx={{backgroundColor: '#025464',}} variant="contained">{data.text}</Button>
         </Container>
       ))}
     </Component>
