@@ -3,7 +3,7 @@ import { Dialog, Box, TextField, Button, Typography } from '@mui/material';
 import { useState } from 'react';
 const Component = styled(Box)`
   height: 90vh;
-  width: 70vh;
+  width: 50vh;
   display: flex;
   flex-direction: column;
   padding: 40px 30px ;
@@ -43,8 +43,9 @@ const accountIntitialValues = {
 }
 const LoginDialog = ({ open, setOpen }) => {
 
-    const[account,toggleAccount] = useState(accountIntitialValues.login)
-    const handleClose = () => {
+  const[account,toggleAccount] = useState(accountIntitialValues.login)
+
+  const handleClose = () => {
     setOpen(false);
     toggleAccount(accountIntitialValues.login);
   };
@@ -52,6 +53,7 @@ const LoginDialog = ({ open, setOpen }) => {
   const toggleSignup = () => {
     toggleAccount(accountIntitialValues.signup);
   }
+
   return (
     <Dialog open={open} onClose={handleClose} PaperProps={{sx:{maxwidth: 'unset'}}}>
         {
@@ -59,7 +61,7 @@ const LoginDialog = ({ open, setOpen }) => {
             <Component>
                 <TextInput id="outlined-basic" label="Email" variant="outlined" />
                 <TextInput id="outlined-basic" label="Password" variant="outlined" />
-                <InputBtn>Login</InputBtn>
+                <InputBtn style={{marginTop: 35}}>Login</InputBtn>
                 <Text>
                   By continuing, you agree to LocalMart's Conditions of Use and Privacy Notice.
                 </Text>
@@ -70,7 +72,7 @@ const LoginDialog = ({ open, setOpen }) => {
                 <TextInput id="outlined-basic" label="User Name" variant="outlined" />
                 <TextInput id="outlined-basic" label="Email" variant="outlined" />
                 <TextInput id="outlined-basic" label="Password" variant="outlined" />
-                <InputBtn>Submit</InputBtn>
+                <InputBtn style={{marginTop: 35}}>Submit</InputBtn>
 
                 
           </Component>
