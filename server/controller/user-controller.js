@@ -7,7 +7,7 @@ export const userSignup = async (request, response) => {
     try {
         const exist = await user.findOne({ email: request.body.email });
         if (exist) {
-            return response.status(401).json({ message: 'an account with this email already exist' });
+            return response.status(401).json({ message: 'An account with this email already exists' });
         }
         const user = request.body;
         const newUser = new User(user);
