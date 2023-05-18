@@ -1,6 +1,8 @@
 import { styled } from '@mui/system';
 import { Dialog, Box, TextField, Button, Typography } from '@mui/material';
 import { useState } from 'react';
+import styles from './loginDialog.css';
+import './loginDialog.css'
 
 const Component = styled(Box)`
   height: 90vh;
@@ -10,13 +12,13 @@ const Component = styled(Box)`
   padding: 40px 30px ;
   flex: 1;
   text-align: center;
+  background-color: #F8F1F1;
 `;
 
 const TextInput = styled(TextField)`
   margin: 15px;
-  height: 35px;
+  background-color: #fff;
 `
-
 const InputBtn = styled(Button)`
   margin: 15px;
   background: #E57C23;
@@ -63,7 +65,7 @@ const LoginDialog = ({ open, setOpen }) => {
         {
             account.view === 'login' ?
             <Component>
-                <TextInput id="outlined-basic" label="Email" variant="outlined" />
+                <TextInput className='abc' id="outlined-basic" label="Email" variant="outlined" />
                 <TextInput id="outlined-basic" label="Password" variant="outlined" />
                 <InputBtn style={{marginTop: 35}}>Login</InputBtn>
                 <Text>
@@ -73,7 +75,8 @@ const LoginDialog = ({ open, setOpen }) => {
           </Component>
           :
           <Component>
-                <TextInput id="outlined-basic" label="User Name" variant="outlined" />
+                <TextInput id="outlined-basic" label="First Name" variant="outlined" />
+                <TextInput id="outlined-basic" label="Last Name" variant="outlined" />
                 <TextInput id="outlined-basic" label="Email" variant="outlined" />
                 <TextInput id="outlined-basic" label="Password" variant="outlined" />
                 <InputBtn style={{marginTop: 35}}>Submit</InputBtn>
